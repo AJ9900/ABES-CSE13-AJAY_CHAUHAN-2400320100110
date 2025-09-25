@@ -1,0 +1,261 @@
+/* Navbar logo right alignment */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    flex: 1;
+}
+
+.abes-logo-navbar {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+}
+
+.abes-logo-navbar .abes-logo {
+    height: 54px;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(31, 162, 255, 0.10);
+    background: #fff;
+    padding: 2px 8px;
+    animation: logoPop 1.2s cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+/* Remove old logo container margin if present */
+.abes-logo-container {
+    display: none;
+}
+
+/* ABES EC Logo Styles */
+.abes-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.abes-logo {
+    height: 80px;
+    width: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(31, 162, 255, 0.13);
+    animation: logoPop 1.2s cubic-bezier(.68, -0.55, .27, 1.55);
+    background: #fff;
+    padding: 4px 12px;
+}
+
+@keyframes logoPop {
+    0% {
+        transform: scale(0.7) translateY(-30px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: scale(1.05) translateY(8px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animated Navbar Styles */
+.navbar {
+    width: 100%;
+    background: linear-gradient(90deg, #1fa2ff, #12d8fa, #a6ffcb, #fcb69f);
+    background-size: 300% 300%;
+    animation: navGradient 8s ease-in-out infinite;
+    box-shadow: 0 2px 12px rgba(31, 162, 255, 0.10);
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 28px;
+}
+
+.navbar a {
+    display: block;
+    padding: 18px 0 14px 0;
+    color: #222;
+    font-size: 1.18em;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar a:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, #ff512f, #dd2476, #1fa2ff);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(.68, -0.55, .27, 1.55);
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+}
+
+.navbar a:hover {
+    color: #ff512f;
+}
+
+.navbar a:hover:after {
+    width: 100%;
+}
+
+@keyframes navGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Copyright footer styles */
+.footer-copyright {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0 10px 0;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    z-index: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb, #fcb69f, #ffecd2);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1,
+h4,
+h6 {
+    color: rgb(109, 12, 18);
+    background-color: rgb(202, 197, 197);
+    text-align: center;
+    font-size: 40px;
+
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    border: 2px solid rgb(46, 30, 30);
+}
+
+.div1 {
+    border: 6px solid;
+    border-image: linear-gradient(270deg, #ff512f, #dd2476, #1fa2ff, #12d8fa, #a6ffcb, #ff512f) 1;
+    animation: borderMove 4s linear infinite;
+    width: 700px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-left: 350px;
+    margin-top: 60px;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes borderMove {
+    0% {
+        border-image-source: linear-gradient(270deg, #ff512f, #dd2476, #1fa2ff, #12d8fa, #a6ffcb, #ff512f);
+    }
+
+    100% {
+        border-image-source: linear-gradient(630deg, #ff512f, #dd2476, #1fa2ff, #12d8fa, #a6ffcb, #ff512f);
+    }
+}
+
+form {
+    padding: 18px;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input {
+    width: 350px;
+    height: 32px;
+    font-size: 1.1em;
+    font-weight: 300;
+    padding: 6px 12px;
+    margin: 8px 0;
+    border: 1.5px solid #aaa;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    font-size: 1.1em;
+    padding: 6px 18px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #357a38;
+}
