@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">  </div>
+        <h1> <center> Weather Web Application </center></Weather></h1>
+    </header>
+
+    <main class="container">
+        <section class="search-card">
+            <input id="cityInput" type="text" placeholder="Enter city name (e.g., Delhi)" />
+            <button id="searchBtn">Get Weather</button>
+        </section>
+
+        <section id="resultCard" class="result-card hidden">
+            <div class="location">
+                <h2 id="cityName">City, Country</h2>
+                <div id="timeInfo" class="muted"></div>
+            </div>
+
+            <div class="main-info">
+                <div class="left">
+                    <img id="weatherIcon" src="" alt="icon" />
+                    <div id="description" class="desc">Clear sky</div>
+                </div>
+                <div class="right">
+                    <div class="temp" id="temp">-- °C</div>
+                    <div class="feels" id="feels">Feels like: -- °C</div>
+                </div>
+            </div>
+
+            <div class="details">
+                <div>Humidity: <span id="humidity">--%</span></div>
+                <div>Wind: <span id="wind">-- m/s</span></div>
+                <div>Pressure: <span id="pressure">-- hPa</span></div>
+                <div>Coordinates: <span id="coord">--</span></div>
+            </div>
+        </section>
+
+        <section id="errorBox" class="error hidden"></section>
+    </main>
+
+    <footer class="footer">
+        <small>Designed by Ajay Chauhan </small>
+    </footer>
+
+    
+    <script src="weather.js"></script>
+</body>
+
+</html>

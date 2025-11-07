@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Bookstore</title>
+</head>
+<body>
+<div class="top">
+    <h1>📚 My College Online Bookstore</h1>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('login')">Login</a>
+    <a href="#" onclick="showPage('register')">Registration</a>
+    <a href="#" onclick="showPage('catalogue')">Catalogue</a>
+    <a href="#" onclick="showPage('cart')">Cart</a>
+</div>
+
+<div class="container">
+    <div class="left">
+        <h3>Book Categories</h3>
+        <a href="#" onclick="showPage('cse')">CSE</a>
+        <a href="#" onclick="showPage('ece')">ECE</a>
+        <a href="#" onclick="showPage('eee')">EEE</a>
+        <a href="#" onclick="showPage('mech')">Mechanical</a>
+    </div>
+    <div class="right" id="rightContent">
+        <div id="home">
+            <h2>Welcome to the Online Bookstore</h2>
+            <p>This website helps you browse and purchase textbooks easily.<br>
+            Use the menu on the left to explore different categories.<br>
+            Login or Register to add books to your cart and place an order.</p>
+        </div>
+        <div id="login" style="display:none;">
+            <h2 style="background-color: rgb(224, 132, 19);"><br><center>LOGIN PAGE</center></h2>
+    <P>the <strong>input type="password"</strong>defines a password field:</P>
+    <form style="background-color: antiquewhite;">
+        <label for="username" style="background-color: rgb(159, 99, 21);"> Username:</label><br><br>
+        <input type="text" style="background-color: rgb(228, 207, 179);" id="username" name="username"><br><br>
+        <label for="pwd" style="background-color: rgb(159, 99, 21);">Password:</label><br><br>
+        <input type="password" style="background-color: rgb(228,207,179);" id="pwd" name="pwd"><br><br>
+        <input type="submit" value="submit">     <input type="reset"> 
+        </form>
+        </div>
+    </form>
+        </div>
+        <div id="catalogue" style="display:none;">
+            <h2>Book Catalogue</h2>
+            <p>Select a category from the left to view books.</p>
+        </div>
+        <div id="cart" style="display:none;">
+            <h2>Your Cart</h2>
+            <p>No items added yet.</p>
+        </div>
+        <div id="cse" style="display:none;">
+            <h2>CSE Books</h2>
+            <ul>
+                <li>Programming in C</li>
+                <li>Data Structures</li>
+                <li>Operating Systems</li>
+                <li>Database Management Systems</li>
+            </ul>
+        </div>
+        <div id="ece" style="display:none;">
+            <h2>ECE Books</h2>
+            <ul>
+                <li>Digital Electronics</li>
+                <li>Signals and Systems</li>
+                <li>Microprocessors</li>
+            </ul>
+        </div>
+        <div id="eee" style="display:none;">
+            <h2>EEE Books</h2>
+            <ul>
+                <li>Electrical Machines</li>
+                <li>Power Systems</li>
+                <li>Control Engineering</li>
+            </ul>
+        </div>
+        <div id="mech" style="display:none;">
+            <h2>Mechanical Books</h2>
+            <ul>
+                <li>Thermodynamics</li>
+                <li>Fluid Mechanics</li>
+                <li>Strength of Materials</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+function showPage(pageId){
+    let pages = document.querySelectorAll('#rightContent > div');
+    pages.forEach(function(p){
+        p.style.display = 'none';
+    });
+    document.getElementById(pageId).style.display = 'block';
+}
+</script></body>
+</html> 

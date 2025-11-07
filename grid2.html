@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            border: 3px solid rgb(11, 11, 18);
+            border-radius: 4px;
+        }
+        .item {
+            background-color: #2c6a5b;
+            color: rgb(130, 127, 127);
+            border: 1px solid #998f8f;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 4px;
+            margin: 5px;
+            flex: 1 1 calc(33.333% - 10px);
+            box-sizing: border-box;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">Item 1</div>
+        <div class="item item2">Item 2</div>
+        <div class="item item3">Item 3</div>
+        <div class="item item4">Item 4</div>
+        <div class="item item5">Item 5</div>
+        <div class="item item6">Item 6</div>
+        <div class="item item6">Item 6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store - Catalogue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #7388a4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #23282c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+        }
+        .book {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 250px;
+            margin: 15px;
+            text-align: center;
+            box-shadow: 0 0 8px rgba(58, 52, 52, 0.1);
+            transition: 0.3s;
+        }
+        .book:hover {
+            transform: scale(1.05);
+        }
+        .book img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px 10px 0 0;
+        }
+        .book h3 {
+            color: #33393f;
+            margin: 10px 0;
+        }
+        .book p {
+            margin: 0;
+            color: #555;
+        }
+        .price {
+            color: #e63946;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+        .btn {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 0 15px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #004d99;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Online Book Store</h1>
+        <p>Welcome to our Catalogue Page</p>
+    </header>
+
+    <section class="book-container">
+
+        
+
+        <div class="book">
+            <img src="book2.jpg" alt="Book 2">
+            <h3>Godan</h3>
+            <p>by Munsi premchand</p>
+            <p class="price">₹334</p>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="book">
+            <img src="book3.jpg" alt="Book 3">
+            <h3>Wing of fire</h3>
+            <p>by APJ abdul kalam</p>
+            <p class="price">₹329</p>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="book">
+            <img src="book3_link.jpg" alt="Book 4">
+            <h3>Madhubala</h3>
+            <p>by Harvansh ray Bachchan</p>
+            <p class="price">₹99</p>
+            <button class="btn">Buy Now</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p> @ 2025 Online Book Store | All Rights Reserved | AJAY CHAUHAN</p>
+    </footer>
+
+</body>
+</html>
