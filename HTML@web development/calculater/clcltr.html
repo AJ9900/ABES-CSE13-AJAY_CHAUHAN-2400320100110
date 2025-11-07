@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>3D Scientific Calculator</title>
+    <link rel="stylesheet" href="clcltr.css"/>
+    <style>
+        /* small layout additions for settings / secondary display */
+        .top-area { display:flex; gap:1rem; align-items:center; justify-content:center; margin-bottom:1rem; }
+        .settings { display:flex; gap:.5rem; align-items:center; font-size:.9rem; color:#ddd; }
+        .settings select, .settings input { background:#2b2f36; color:#fff; border:1px solid #444; padding:.25rem .4rem; border-radius:.35rem; }
+        #expr { font-size:.9rem; color:#bbb; text-align:right; margin-bottom:.35rem; min-height:18px; }
+        .math-anim { display:flex; flex-direction:column; align-items:center; margin-bottom:.6rem; }
+        .math-gif { width:60px; height:60px; object-fit:contain; border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.35); }
+    </style>
+</head>
+<body>
+    <div class="top-area">
+        <div class="math-anim">
+            <svg class="spin-pi" viewBox="0 0 64 64" width="48" height="48">
+                <text x="8" y="48" font-size="48" font-family="serif" fill="#ff9800">π</text>
+            </svg>
+            <img class="math-gif" src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="math"/>
+        </div>
+
+        <div class="settings">
+            <label>Mode
+                <select id="angle-mode">
+                    <option value="DEG">Deg</option>
+                    <option value="RAD">Rad</option>
+                </select>
+            </label>
+            <label>Precision
+                <select id="precision">
+                    <option value="12">12 sig</option>
+                    <option value="10">10 sig</option>
+                    <option value="8">8 sig</option>
+                    <option value="6">6 sig</option>
+                    <option value="4">4 sig</option>
+                </select>
+            </label>
+        </div>
+    </div>
+
+    <div id="box">
+        <div id="expr"></div>
+        <input type="text" placeholder="0" readonly id="display"/>
+
+        <!-- scientific functions -->
+        <div class="scientific-row">
+            <button class="scientific">sin</button>
+            <button class="scientific">cos</button>
+            <button class="scientific">tan</button>
+            <button class="scientific">ln</button>
+            <button class="scientific">log</button>
+        </div>
+
+        <div class="scientific-row">
+            <button class="scientific">√</button>
+            <button class="scientific">x²</button>
+            <button class="scientific">x³</button>
+            <button class="scientific">x^y</button>
+            <button class="scientific">x!</button>
+        </div>
+
+        <div class="scientific-row">
+            <button class="scientific">π</button>
+            <button class="scientific">e</button>
+            <button class="scientific">exp</button>
+            <button class="scientific">1/x</button>
+            <button class="scientific">abs</button>
+        </div>
+
+        <!-- basic operations -->
+        <div class="btn-row">
+            <button class="operator">Ac</button>
+            <button class="operator">DEL</button>
+            <button class="operator">%</button>
+            <button class="operator">/</button>
+        </div>
+
+        <div class="btn-row">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">*</button>
+        </div>
+
+        <div class="btn-row">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">-</button>
+        </div>
+
+        <div class="btn-row">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+        </div>
+
+        <div class="btn-row">
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button id="equall" class="equal">=</button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
